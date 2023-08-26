@@ -9,10 +9,17 @@
   "pip_requirements": {
     "enabled": false
   },
+  "npm": {
+    "enabled": true
+  },
   "pip-compile": {
     "fileMatch": ["(^|/)requirements\\.in$"]
   },
   "packageRules": [
+    {
+      "matchManagers": ["npm"],
+      "enabled": true
+    },
     {
       "matchUpdateTypes": ["minor"],
       "automerge": false,
